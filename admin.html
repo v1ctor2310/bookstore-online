@@ -1,89 +1,232 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Đăng nhập cho người bán hàng - Tên Web</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="admin.css">
-        <script src="bookshop.js" defer></script>
-        <script src="https://unpkg.com/lucide@latest"></script>
-    </head>
-    <body>
-        <div class="admin-body">
-            <main class="admin-shell">
-                <section class="admin-aside">
-                    <a href="index.html" class="brand">
-                        <span class="brand-mark">
-                            <img src="logo.jpg" alt="LOGO"">
-                        </span>
-                        <span>TÊN <span class="brand-light">WEB</span></span>
-                    </a>
-                    <div class="admin-aside-copy">
-                        <p class="eyebrow">KHÔNG GIAN LÀM VIỆC (TÊN WEB)</p>
-                        <h1>Chăm chút từng
-                        <em>trang sách.</em>
-                        </h1>
-                        <p>Một góc riêng để đội ngũ (TÊN WEB) tiếp tục kết nối những cuốn sách hay với người đọc.</p>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#183d32">
+    <title>Đăng nhập người bán - Brawhalla Books</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="admin-body">
+    <main class="admin-shell">
+        <section class="admin-aside">
+            <a href="index.html" class="brand brand-admin">
+                <span class="brand-mark">
+                    <img src="logo.jpg">
+                </span>
+                <span>BRAWHALLA<span class="brand-light">BOOKS</span></span>
+            </a>
+
+            <div class="admin-aside-copy">
+                <p class="eyebrow">DÀNH CHO NGƯỜI BÁN HÀNG</p>
+                <h1>
+                    Chăm chút từng
+                    <em>trang sách.</em>
+                </h1>
+                <p>Đăng nhập để quản lý cửa hàng và kết nối những cuốn sách hay với người đọc.</p>
+            </div>
+
+            <div class="admin-art-space"></div>
+
+            <p class="admin-aside-foot">ĐỌC CHẬM · SỐNG LÂU · KẾT NỐI</p>
+        </section>
+
+        <section class="admin-login-area">
+            <a href="index.html" class="back-to-store">
+                <i data-lucide="move-left"></i>
+                Quay về cửa hàng
+            </a>
+
+            <div class="login-card">
+                <span class="login-icon">
+                    <img src="logo.jpg">
+                </span>
+                <p class="eyebrow">CỔNG ĐĂNG NHẬP NGƯỜI BÁN</p>
+                <h2>Chào mừng trở lại</h2>
+                <p class="login-intro">Đăng nhập để tiếp tục quản lý gian hàng Brawhalla Books.</p>
+
+                <div class="seller-mode-switch">
+                    <button class="seller-mode is-active" type="button" data-seller-mode="login">Đăng nhập</button>
+                    <button class="seller-mode" type="button" data-seller-mode="register">Đăng ký</button>
+                </div>
+
+                <form class="admin-form" id="seller-login-form">
+                    <label for="seller-email">Email người bán</label>
+                    <input
+                        type="email"
+                        id="seller-email"
+                        name="email"
+                        autocomplete="username"
+                        placeholder="seller@brawhallabooks.vn"
+                        required
+                    >
+
+                    <div class="password-label">
+                        <label for="seller-password">Mật khẩu</label>
+                        <a href="#seller-login-form">Quên mật khẩu?</a>
                     </div>
-                    
-                    <p class="admin-aside-foot">ĐỌC CHẬM · SỐNG LÂU · KẾT NỐI</p>
-                </section>
+                    <input
+                        type="password"
+                        id="seller-password"
+                        name="password"
+                        autocomplete="current-password"
+                        placeholder="Nhập mật khẩu của bạn"
+                        required
+                    >
 
-                <section class="admin-login-area">
-                    <a href="index.html" class="back-to-store">
-                        <span>
-                            <i data-lucide="move-left"></i>
-                        </span>
-                        Quay về cửa hàng
-                    </a>
-                    <div class="login-card">
-                        <span class="login-icon">
-                            <img src="logo.jpg" alt="LOGO">
-                        </span>
-                        <p class="eyebrow">TRANG DÀNH CHO NGƯỜI BÁN HÀNG</p>
-                        <h2>Chào mừng trở lại.</h2>
-                        <p class="login-intro">Đăng nhập để tiếp tục</p>
-                        <form class="admin-form" id="admin-login-form">
-                            <label for="admin-email">Email</label>
-                            <input type="email" id="admin-email" name="email" autocomplete="username" placeholder="admin@123.vn" required>
-                            <div class="password-label">
-                                <label for="admin-password">Mật khẩu</label>
-                                <a href="#admin-login-form">Quên mật khẩu</a>
-                            </div>
-                            <input type="password" id="admin-password" name="password" autocomplete="current-password" placeholder="Nhập mật khẩu của bạn" required>
-                            <label class="remember-option">
-                                <input type="checkbox" name="remember">
-                                <span>Ghi nhớ đăng nhập trên thiết bị </span>
-                                <button class="btn btn-dark login-btn" type="submit">
-                                    Đăng nhập
-                                    <span>
-                                        <i data-lucide="move-right"></i>
-                                    </span>
-                                </button>
-                            </label>
-                        </form>
-                        <p class="login-feedback" id="login-feedback" role="status">
-                            <span>
-                                <i data-lucide="users"></i>
-                            </span>
-                            Khu vực dành cho bán hàng
-                        </p>
+                    <label class="remember-option">
+                        <input type="checkbox" name="remember">
+                        <span>Ghi nhớ đăng nhập trên thiết bị này</span>
+                    </label>
+
+                    <button class="btn btn-dark login-button" type="submit">
+                        Đăng nhập người bán
+                        <i data-lucide="arrow-right"></i>
+                    </button>
+                    <p class="login-feedback" id="seller-login-feedback"></p>
+                </form>
+
+                <form class="admin-form seller-register-form" id="seller-register-form" hidden>
+                    <label for="seller-name">Họ và tên</label>
+                    <input
+                        type="text"
+                        id="seller-name"
+                        name="name"
+                        autocomplete="name"
+                        placeholder="Nhập họ và tên"
+                        required
+                    >
+
+                    <label for="seller-shop">Tên cửa hàng</label>
+                    <input
+                        type="text"
+                        id="seller-shop"
+                        name="shop"
+                        autocomplete="organization"
+                        placeholder="Nhập tên cửa hàng"
+                        required
+                    >
+
+                    <label for="seller-register-email">Email người bán</label>
+                    <input
+                        type="email"
+                        id="seller-register-email"
+                        name="email"
+                        autocomplete="email"
+                        placeholder="seller@brawhallabooks.vn"
+                        required
+                    >
+
+                    <label for="seller-register-password">Mật khẩu</label>
+                    <input
+                        type="password"
+                        id="seller-register-password"
+                        name="password"
+                        autocomplete="new-password"
+                        placeholder="Tạo mật khẩu"
+                        minlength="6"
+                        required
+                    >
+
+                    <label for="seller-confirm-password">Nhập lại mật khẩu</label>
+                    <input
+                        type="password"
+                        id="seller-confirm-password"
+                        name="confirm-password"
+                        autocomplete="new-password"
+                        placeholder="Nhập lại mật khẩu"
+                        minlength="6"
+                        required
+                    >
+
+                    <button class="btn btn-dark login-button" type="submit">
+                        Tạo tài khoản người bán
+                        <i data-lucide="arrow-right"></i>
+                    </button>
+                    <p class="login-feedback" id="seller-register-feedback"></p>
+                </form>
+
+                <div class="social-login">
+                    <span class="social-login-divider">Hoặc đăng nhập với</span>
+                    <div class="social-login-buttons">
+                        <button class="social-login-button" type="button" data-social-provider="Google">
+                            <span class="social-google-mark">G</span>
+                            Google
+                        </button>
+                        <button class="social-login-button" type="button" data-social-provider="Facebook">
+                            <span class="social-facebook-mark">f</span>
+                            Facebook
+                        </button>
                     </div>
-                    <p class="admin-copyright">
-                        <span>
-                            <i data-lucide="copyright"></i>
-                        </span>
-                        (TÊN WEB). Tất cả vì một trang sách hay.
-                    </p>
-                </section>
-            </main>
-        </div>
+                </div>
+                <p class="login-feedback social-feedback" id="seller-social-feedback"></p>
 
+                <p class="login-security">
+                    <i data-lucide="store"></i>
+                    Tài khoản dành cho người bán hàng
+                </p>
+            </div>
 
+            <p class="admin-copyright">
+                <i data-lucide="copyright"></i>
+                2026 Brawhalla Books. Tất cả vì một trang sách hay.
+            </p>
+        </section>
+    </main>
 
-        <script>
-            lucide.createIcons();
-        </script>
-    </body>
-    </html>
+    <script>
+        lucide.createIcons();
+
+        const sellerLoginForm = document.querySelector("#seller-login-form");
+        const sellerRegisterForm = document.querySelector("#seller-register-form");
+        const sellerLoginFeedback = document.querySelector("#seller-login-feedback");
+        const sellerRegisterFeedback = document.querySelector("#seller-register-feedback");
+        const sellerSocialFeedback = document.querySelector("#seller-social-feedback");
+        const sellerSocialLogin = document.querySelector(".social-login");
+        const sellerPassword = document.querySelector("#seller-register-password");
+        const sellerConfirmPassword = document.querySelector("#seller-confirm-password");
+        const sellerLoginTitle = document.querySelector(".login-card h2");
+        const sellerLoginIntro = document.querySelector(".login-intro");
+
+        
+
+        document.querySelectorAll("[data-seller-mode]").forEach((button) => {
+            button.addEventListener("click", () => {
+                const isRegistering = button.dataset.sellerMode === "register";
+
+                sellerLoginForm.hidden = isRegistering;
+                sellerRegisterForm.hidden = !isRegistering;
+                sellerSocialLogin.hidden = isRegistering;
+                sellerLoginFeedback.textContent = "";
+                sellerRegisterFeedback.textContent = "";
+                sellerSocialFeedback.textContent = "";
+                sellerLoginTitle.textContent = isRegistering ? "Tạo tài khoản người bán" : "Chào mừng trở lại";
+                sellerLoginIntro.textContent = isRegistering
+                    ? "Đăng ký gian hàng để kết nối sách hay với người đọc."
+                    : "Đăng nhập để tiếp tục quản lý gian hàng Brawhalla Books.";
+
+                document.querySelectorAll("[data-seller-mode]").forEach((modeButton) => {
+                    modeButton.classList.toggle("is-active", modeButton === button);
+                });
+            });
+        });
+
+        sellerRegisterForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            if (sellerPassword.value !== sellerConfirmPassword.value) {
+                sellerConfirmPassword.setCustomValidity("Mật khẩu nhập lại chưa khớp.");
+                sellerConfirmPassword.reportValidity();
+                sellerConfirmPassword.addEventListener("input", () => {
+                    sellerConfirmPassword.setCustomValidity("");
+                }, { once: true });
+                return;
+            }
+
+        });
+
+    </script>
+</body>
+</html>
