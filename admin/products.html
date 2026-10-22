@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Sản phẩm - BookStore Admin</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <i class="fa-solid fa-book-open"></i>
+                <span>BookStore Admin</span>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+                <li class="active"><a href="products.html"><i class="fa-solid fa-book"></i> Quản lý Sách (Mục 11)</a></li>
+                <li><a href="import.html"><i class="fa-solid fa-boxes-stacked"></i> Nhập hàng & Giá (Mục 12)</a></li>
+                <li><a href="#"><i class="fa-solid fa-users"></i> Người dùng</a></li>
+                <li><a href="#"><i class="fa-solid fa-receipt"></i> Đơn hàng</a></li>
+            </ul>
+        </aside>
+
+        <div class="main-content">
+            <header class="topbar">
+                <div class="admin-user">
+                    <span>Xin chào, <strong>...</strong></span>
+                    <a href="../index.html" class="btn-logout"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a>
+                </div>
+            </header>
+
+            <main class="content-body">
+                <div class="page-header-flex">
+                    <h1>Quản lý Danh mục & Sản phẩm</h1>
+                    <button class="btn-add"><i class="fa-solid fa-plus"></i> Thêm sách mới</button>
+                </div>
+
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Ảnh</th>
+                                <th>Tên sách</th>
+                                <th>Danh mục</th>
+                                <th>Giá bán</th>
+                                <th>Tồn kho</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#01</td>
+                                <td><img src="../logo.jpg" alt="Book" class="table-img"></td>
+                                <td><strong>Đắc Nhân Tâm</strong></td>
+                                <td>Kỹ năng sống</td>
+                                <td>86,000đ</td>
+                                <td>45</td>
+                                <td>
+                                    <button class="btn-action btn-edit" title="Sửa"><i class="fa-solid fa-pen"></i></button>
+                                    <button class="btn-action btn-delete" title="Xóa"><i class="fa-solid fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#02</td>
+                                <td><img src="../logo.jpg" alt="Book" class="table-img"></td>
+                                <td><strong>Nhà Giả Kim</strong></td>
+                                <td>Văn học</td>
+                                <td>79,000đ</td>
+                                <td>12</td>
+                                <td>
+                                    <button class="btn-action btn-edit" title="Sửa"><i class="fa-solid fa-pen"></i></button>
+                                    <button class="btn-action btn-delete" title="Xóa"><i class="fa-solid fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#03</td>
+                                <td><img src="../logo.jpg" alt="Book" class="table-img"></td>
+                                <td><strong>Tuổi Trẻ Đáng Giá Bao Nhiêu</strong></td>
+                                <td>Kỹ năng sống</td>
+                                <td>92,000đ</td>
+                                <td>0 (Hết)</td>
+                                <td>
+                                    <button class="btn-action btn-edit" title="Sửa"><i class="fa-solid fa-pen"></i></button>
+                                    <button class="btn-action btn-delete" title="Xóa"><i class="fa-solid fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

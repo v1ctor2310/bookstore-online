@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f7f5ef;
+    color: #2c382b;
+}
+
+.admin-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 260px;
+    background-color: #1f4135;
+    color: #f6f2e8;
+}
+
+.sidebar-brand {
+    padding: 24px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #f6f2e8;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 15px 0;
+}
+
+.sidebar-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    color: #c2cec3;
+    text-decoration: none;
+    transition: 0.2s;
+    font-size: 14px;
+}
+
+.sidebar-menu li.active a,
+.sidebar-menu li a:hover {
+    background-color: #162f25; 
+    color: #d5ae87;
+    border-left: 4px solid #d5ae87;
+}
+
+/* --- PHẦN BÊN PHẢI --- */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar {
+    height: 70px;
+    background: #fffefa;
+    border-bottom: 1px solid #e9e6dc;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 35px;
+}
+
+.admin-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    color: #536157;
+}
+
+.btn-logout {
+    color: #a16e4e;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-logout:hover {
+    text-decoration: underline;
+}
+
+.content-body {
+    padding: 35px;
+}
+
+.content-body h1 {
+    font-size: 24px;
+    color: #1f4135;
+    margin-bottom: 20px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background: #fffefa;
+    padding: 22px;
+    border-radius: 4px;
+    border: 1px solid #e9e6dc;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 15px rgba(44, 56, 43, 0.03);
+}
+
+.stat-card i {
+    font-size: 24px;
+    color: #1f4135;
+    background: #f0ede4;
+    padding: 16px;
+    border-radius: 4px;
+}
+
+.stat-card h3 {
+    font-size: 20px;
+    color: #1f4135;
+    margin-bottom: 4px;
+}
+
+.stat-card p {
+    color: #898b81;
+    font-size: 13px;
+}
+
+/*css cua trang quan li san pham*/
+.page-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn-add {
+    background-color: #1f4135;
+    color: #f6f2e8;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.2s;
+}
+
+.btn-add:hover {
+    background-color: #162f25;
+}
+
+.table-container {
+    background: #fffefa;
+    border: 1px solid #e9e6dc;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(44, 56, 43, 0.03);
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 13px;
+}
+
+.data-table th, 
+.data-table td {
+    padding: 14px 20px;
+    border-bottom: 1px solid #e9e6dc;
+}
+
+.data-table th {
+    background-color: #f0ede4;
+    color: #1f4135;
+    font-weight: 700;
+}
+
+.data-table tr:hover {
+    background-color: #faf9f4;
+}
+
+.table-img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 3px;
+    border: 1px solid #e9e6dc;
+}
+
+/*giao dien nut thao tac*/
+.btn-action {
+    background: transparent;
+    border: 1px solid #e5e3da;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-edit {
+    color: #3b82f6;
+}
+
+.btn-edit:hover {
+    background: #eff6ff;
+    border-color: #3b82f6;
+}
+
+.btn-delete {
+    color: #ef4444;
+    margin-left: 5px;
+}
+
+.btn-delete:hover {
+    background: #fef2f2;
+    border-color: #ef4444;
+}
