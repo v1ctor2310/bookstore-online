@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Bookstore</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <i class="fa-solid fa-book-open"></i>
+                <span>BookStore Admin</span>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active"><a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+                <li><a href="products.html"><i class="fa-solid fa-book"></i> Quản lý Sách</a></li>
+                <li><a href="#"><i class="fa-solid fa-boxes-stacked"></i> Nhập hàng & Giá</a></li>
+                <li><a href="#"><i class="fa-solid fa-users"></i> Người dùng</a></li>
+                <li><a href="#"><i class="fa-solid fa-receipt"></i> Đơn hàng</a></li>
+            </ul>
+        </aside>
+
+        <div class="main-content">
+            <header class="topbar">
+                <div class="admin-user">
+                    <span>Xin chào, <strong>...</strong></span>
+                    <a href="../admin.html" class="btn-logout"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a>
+                </div>
+            </header>
+
+            <main class="content-body">
+                <h1>Bảng Điều Khiển Tổng Quan</h1>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fa-solid fa-book-bookmark"></i>
+                        <div>
+                            <h3>1,200</h3>
+                            <p>Tổng số sách</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <div>
+                            <h3>85</h3>
+                            <p>Đơn hàng mới</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fa-solid fa-users"></i>
+                        <div>
+                            <h3>340</h3>
+                            <p>Thành viên</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
