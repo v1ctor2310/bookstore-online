@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#183d32" />
+    <title>Đăng nhập quản trị viên — Mộc Books</title>
+    <link rel="stylesheet" href="bookshop.css" />
+    <script src="bookshop.js" defer></script>
+  </head>
+  <body class="admin-body">
+    <main class="admin-shell">
+      <section class="admin-aside">
+        <a class="brand brand-admin" href="index.html" aria-label="Mộc Books, về cửa hàng"><span class="brand-mark" aria-hidden="true">M</span><span>MỘC<span class="brand-light">BOOKS</span></span></a>
+        <div class="admin-aside-copy"><p class="eyebrow">KHÔNG GIAN LÀM VIỆC MỘC</p><h1>Chăm chút<br />từng <em>trang sách.</em></h1><p>Một góc riêng để đội ngũ Mộc tiếp tục kết nối những cuốn sách hay với người đọc.</p></div>
+        <div class="admin-art" aria-hidden="true"><span class="admin-art-circle"></span><span class="admin-art-book admin-art-book-one">MỘC<br />BOOKS</span><span class="admin-art-book admin-art-book-two">MỘT<br />CUỐN<br />SÁCH</span><span class="admin-art-leaf">❧</span><span class="admin-art-spark">✳</span></div>
+        <p class="admin-aside-foot">ĐỌC CHẬM · SỐNG SÂU · KẾT NỐI</p>
+      </section>
+      <section class="admin-login-area">
+        <a class="back-to-store" href="index.html"><span aria-hidden="true">←</span> Quay về cửa hàng</a>
+        <div class="login-card">
+          <span class="login-icon" aria-hidden="true">M</span>
+          <p class="eyebrow">TRANG DÀNH RIÊNG CHO QUẢN TRỊ</p>
+          <h2>Chào mừng trở lại</h2>
+          <p class="login-intro">Đăng nhập để tiếp tục chăm sóc cửa hàng Mộc Books.</p>
+          <form class="admin-form" id="admin-login-form">
+            <label for="admin-email">Email quản trị</label>
+            <input id="admin-email" name="email" type="email" autocomplete="username" placeholder="admin@mocbooks.vn" required />
+            <div class="password-label"><label for="admin-password">Mật khẩu</label><a href="#admin-login-form">Quên mật khẩu?</a></div>
+            <input id="admin-password" name="password" type="password" autocomplete="current-password" placeholder="Nhập mật khẩu của bạn" required />
+            <label class="remember-option"><input type="checkbox" name="remember" /><span>Ghi nhớ đăng nhập trên thiết bị này</span></label>
+            <button class="button button-dark login-button" type="submit">Đăng nhập quản trị <span aria-hidden="true">→</span></button>
+            <p class="login-feedback" id="login-feedback" role="status" aria-live="polite"></p>
+          </form>
+          <p class="login-security"><span aria-hidden="true">♧</span> Khu vực quản trị · Chỉ dành cho nhân sự được cấp quyền</p>
+        </div>
+        <p class="admin-copyright">© 2026 Mộc Books. Tất cả vì một trang sách hay.</p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f6f0" />
+    <meta name="description" content="Mộc Books — chọn một cuốn sách hay, mở ra một thế giới mới." />
+    <title>Mộc Books — Mở trang sách, mở thế giới</title>
+    <link rel="stylesheet" href="bookshop.css" />
+    <script src="bookshop.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">MỪNG BẠN GHÉ THĂM · MIỄN PHÍ VẬN CHUYỂN ĐƠN TỪ 300.000₫</div>
+    <header class="site-header">
+      <div class="header-main page-width">
+        <a class="brand" href="index.html" aria-label="Mộc Books, trang chủ">
+          <span class="brand-mark" aria-hidden="true">M</span>
+          <span>MỘC<span class="brand-light">BOOKS</span></span>
+        </a>
+        <form class="search-form" role="search" action="index.html">
+          <label class="visually-hidden" for="book-search">Tìm kiếm sách</label>
+          <input id="book-search" type="search" placeholder="Tìm sách, tác giả, chủ đề..." />
+          <button type="submit" aria-label="Tìm kiếm">⌕</button>
+        </form>
+        <div class="header-actions">
+          <a class="account-link" href="#account-access" data-open-account-access><span class="action-icon" aria-hidden="true">♙</span><span>Đăng nhập / Đăng ký</span></a>
+          <a class="cart-link" href="#sach-noi-bat"><span class="action-icon" aria-hidden="true">♧</span><span>Giỏ hàng</span><b>0</b></a>
+        </div>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Mở danh mục"><span></span><span></span></button>
+      </div>
+      <nav class="primary-nav" id="primary-nav" aria-label="Danh mục chính">
+        <div class="page-width nav-inner">
+          <a class="nav-current" href="index.html">Trang chủ</a>
+          <a href="#sach-noi-bat">Sách bán chạy</a>
+          <a href="#danh-muc">Danh mục sách</a>
+          <a href="#goc-doc">Góc đọc Mộc</a>
+          <a href="#account-access" data-open-account-access>Đăng nhập / Đăng ký</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero page-width">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> MỘT GÓC NHỎ DÀNH CHO NGƯỜI YÊU SÁCH</p>
+          <h1>Mở trang sách,<br />mở <em>thế giới.</em></h1>
+          <p class="hero-description">Những cuốn sách được chọn bằng sự tò mò và một chút dịu dàng. Tìm cuốn tiếp theo bạn muốn mang về.</p>
+          <a class="button button-dark" href="#sach-noi-bat">Khám phá sách hay <span aria-hidden="true">↗</span></a>
+          <div class="hero-note"><span class="hero-note-mark" aria-hidden="true">✳</span><span><b>Đọc chậm, sống sâu</b><small>Gợi ý sách cho những ngày thường</small></span></div>
+        </div>
+        <div class="hero-art" aria-label="Bìa sách nghệ thuật và chiếc lá minh họa">
+          <div class="hero-sun" aria-hidden="true"></div>
+          <div class="hero-leaf leaf-one" aria-hidden="true"></div>
+          <div class="hero-leaf leaf-two" aria-hidden="true"></div>
+          <div class="hero-book hero-book-back" aria-hidden="true"><span>NHỮNG<br />MÙA XANH</span><i>NHÀ XUẤT BẢN MỘC</i></div>
+          <div class="hero-book hero-book-front" aria-hidden="true"><span>ĐI QUA<br /><b>MÙA</b><br />BÌNH YÊN</span><i>MỘT CUỐN SÁCH VỀ NHỮNG ĐIỀU NHỎ</i><strong>mộc.</strong></div>
+          <div class="art-caption"><span>✦</span> Những câu chuyện ở lại lâu hơn</div>
+          <div class="hero-sticker"><small>ĐỌC MỘT CHÚT</small><b>Vui cả<br />ngày 🌱</b></div>
+        </div>
+      </section>
+
+      <section class="category-section" id="danh-muc">
+        <div class="page-width">
+          <div class="section-heading">
+            <div><p class="eyebrow">TÌM ĐỌC THEO TÂM TRẠNG</p><h2>Một lối rẽ <em>nhẹ nhàng</em></h2></div>
+            <a class="text-link" href="#sach-noi-bat">Xem tất cả <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="category-grid">
+            <a class="category-card category-literature" href="#sach-noi-bat"><span class="category-symbol" aria-hidden="true">❧</span><span><b>Văn học</b><small>Chạm vào những câu chuyện</small></span><span class="category-arrow" aria-hidden="true">↗</span></a>
+            <a class="category-card category-life" href="#sach-noi-bat"><span class="category-symbol" aria-hidden="true">☼</span><span><b>Kỹ năng sống</b><small>Hiểu mình, thương người</small></span><span class="category-arrow" aria-hidden="true">↗</span></a>
+            <a class="category-card category-children" href="#sach-noi-bat"><span class="category-symbol" aria-hidden="true">✳</span><span><b>Sách thiếu nhi</b><small>Nuôi dưỡng trí tò mò</small></span><span class="category-arrow" aria-hidden="true">↗</span></a>
+            <a class="category-card category-business" href="#sach-noi-bat"><span class="category-symbol" aria-hidden="true">⌁</span><span><b>Kinh doanh</b><small>Mở mang những ý tưởng</small></span><span class="category-arrow" aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="books-section page-width" id="sach-noi-bat">
+        <div class="section-heading">
+          <div><p class="eyebrow">ĐƯỢC BẠN ĐỌC YÊU THÍCH</p><h2>Sách <em>nổi bật</em></h2></div>
+          <a class="text-link" href="#sach-noi-bat">Khám phá thêm <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="book-grid">
+          <article class="book-card">
+            <a class="book-cover cover-morning" href="#sach-noi-bat" aria-label="Đắc nhân tâm">
+              <span class="cover-ornament" aria-hidden="true">✳</span><span class="cover-title">ĐẮC NHÂN<br />TÂM</span><span class="cover-author">DALE CARNEGIE</span><span class="cover-publisher">FIRST NEWS</span>
+            </a>
+            <div class="book-details"><p class="book-category">KỸ NĂNG SỐNG</p><h3>Đắc nhân tâm</h3><p class="book-author">Dale Carnegie</p><div class="book-price"><b>86.000₫</b><del>120.000₫</del><span>-28%</span></div></div>
+          </article>
+          <article class="book-card">
+            <a class="book-cover cover-garden" href="#sach-noi-bat" aria-label="Nhà giả kim">
+              <span class="cover-sun" aria-hidden="true"></span><span class="cover-title">NHÀ<br />GIẢ KIM</span><span class="cover-author">PAULO COELHO</span><span class="cover-publisher">NHÀ XUẤT BẢN VĂN HỌC</span>
+            </a>
+            <div class="book-details"><p class="book-category">VĂN HỌC</p><h3>Nhà giả kim</h3><p class="book-author">Paulo Coelho</p><div class="book-price"><b>64.000₫</b><del>79.000₫</del><span>-19%</span></div></div>
+          </article>
+          <article class="book-card">
+            <a class="book-cover cover-blue" href="#sach-noi-bat" aria-label="Cây cam ngọt của tôi">
+              <span class="cover-moon" aria-hidden="true">☾</span><span class="cover-title">CÂY CAM<br />NGỌT<br />CỦA TÔI</span><span class="cover-author">JOSÉ MAURO DE VASCONCELOS</span><span class="cover-publisher">NHÃ NAM</span>
+            </a>
+            <div class="book-details"><p class="book-category">VĂN HỌC</p><h3>Cây cam ngọt của tôi</h3><p class="book-author">José Mauro de Vasconcelos</p><div class="book-price"><b>90.000₫</b><del>108.000₫</del><span>-17%</span></div></div>
+          </article>
+          <article class="book-card">
+            <a class="book-cover cover-sand" href="#sach-noi-bat" aria-label="Tuổi thơ dữ dội">
+              <span class="cover-frame" aria-hidden="true"></span><span class="cover-title">TUỔI THƠ<br /><em>DỮ DỘI</em></span><span class="cover-author">PHÙNG QUÁN</span><span class="cover-publisher">NHÀ XUẤT BẢN KIM ĐỒNG</span>
+            </a>
+            <div class="book-details"><p class="book-category">VĂN HỌC VIỆT NAM</p><h3>Tuổi thơ dữ dội</h3><p class="book-author">Phùng Quán</p><div class="book-price"><b>156.000₫</b><del>195.000₫</del><span>-20%</span></div></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="reading-banner page-width" id="goc-doc">
+        <div class="banner-copy"><p class="eyebrow">GÓC ĐỌC MỘC</p><h2>Chừa một khoảng<br />cho <em>những điều hay.</em></h2><p>Không cần đọc thật nhanh. Chỉ cần tìm được một câu chữ làm ngày hôm nay dễ chịu hơn.</p><a class="button button-light" href="#sach-noi-bat">Chọn sách cho mình <span aria-hidden="true">→</span></a></div>
+        <div class="banner-art" aria-hidden="true"><span class="banner-flower">✳</span><span class="banner-book"></span><span class="banner-leaf">❧</span><span class="banner-stamp">READ<br />SLOWLY</span></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-width footer-main">
+        <div class="footer-brand"><a class="brand brand-footer" href="index.html"><span class="brand-mark" aria-hidden="true">M</span><span>MỘC<span class="brand-light">BOOKS</span></span></a><p>Một góc nhỏ để tìm sách hay<br />và những phút giây thuộc về mình.</p></div>
+        <div class="footer-column"><b>Về Mộc</b><a href="#goc-doc">Câu chuyện của chúng tôi</a><a href="#sach-noi-bat">Sách nổi bật</a><a href="account.html">Tài khoản khách hàng</a></div>
+        <div class="footer-column"><b>Hỗ trợ</b><a href="#footer">Hướng dẫn mua hàng</a><a href="#footer">Chính sách giao hàng</a><a href="#footer">Liên hệ</a></div>
+        <div class="footer-column footer-admin"><b>Dành cho quản trị</b><a href="admin.html">Đăng nhập quản trị viên ↗</a></div>
+      </div>
+      <div class="page-width footer-bottom" id="footer"><span>© 2026 Mộc Books · Một trang sách, một khoảng trời.</span><span>Được làm nên từ tình yêu dành cho sách.</span></div>
+    </footer>
+    <dialog class="account-dialog" id="account-access" aria-labelledby="account-dialog-title">
+      <div class="account-dialog-inner">
+        <button class="dialog-close" type="button" aria-label="Đóng bảng đăng nhập" data-close-account-access>×</button>
+        <div class="dialog-heading">
+          <span class="login-icon" aria-hidden="true">M</span>
+          <p class="eyebrow">MỘC BOOKS · GÓC RIÊNG CỦA BẠN</p>
+          <h2 id="account-dialog-title">Đăng nhập</h2>
+          <p class="login-intro">Chọn loại tài khoản để tiếp tục.</p>
+        </div>
+        <div class="account-role-switch" role="group" aria-label="Chọn loại tài khoản">
+          <button class="account-role is-active" type="button" data-account-role="customer" aria-pressed="true"><span aria-hidden="true">♙</span> Khách hàng</button>
+          <button class="account-role" type="button" data-account-role="seller" aria-pressed="false"><span aria-hidden="true">▤</span> Người bán hàng</button>
+        </div>
+        <div class="account-mode-switch" role="group" aria-label="Chọn đăng nhập hoặc đăng ký">
+          <button class="account-mode is-active" type="button" data-account-mode="login" aria-pressed="true">Đăng nhập</button>
+          <button class="account-mode" type="button" data-account-mode="register" aria-pressed="false">Đăng ký</button>
+        </div>
+        <form class="account-access-form" id="account-access-form">
+          <label class="account-extra-field" for="account-name" hidden>Họ và tên</label>
+          <input class="account-extra-field" id="account-name" name="name" type="text" autocomplete="name" placeholder="Nhập họ và tên" hidden />
+          <label class="account-shop-field" for="account-shop" hidden>Tên cửa hàng</label>
+          <input class="account-shop-field" id="account-shop" name="shop" type="text" autocomplete="organization" placeholder="Nhập tên cửa hàng" hidden />
+          <label for="account-identity">Email hoặc số điện thoại</label>
+          <input id="account-identity" name="identity" type="text" autocomplete="username" placeholder="Nhập email hoặc số điện thoại" required />
+          <label for="account-password">Mật khẩu</label>
+          <input id="account-password" name="password" type="password" autocomplete="current-password" placeholder="Nhập mật khẩu" required minlength="6" />
+          <label class="account-confirm-label" for="account-confirm" hidden>Nhập lại mật khẩu</label>
+          <input class="account-confirm-field" id="account-confirm" name="confirm" type="password" autocomplete="new-password" placeholder="Nhập lại mật khẩu" hidden minlength="6" />
+          <button class="account-forgot" type="button" data-forgot-password>Quên mật khẩu?</button>
+          <button class="button button-dark account-submit" type="submit">Đăng nhập <span aria-hidden="true">→</span></button>
+          <p class="login-feedback" id="account-access-feedback" role="status" aria-live="polite"></p>
+        </form>
+        <p class="account-dialog-note">Biểu mẫu minh họa · Chưa kết nối xác thực tài khoản.</p>
+        <a class="seller-admin-link" href="admin.html">Dành cho quản trị viên ↗</a>
+      </div>
+    </dialog>
+  </body>
+</html>

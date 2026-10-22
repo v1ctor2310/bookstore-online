@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f6f0" />
+    <title>Tài khoản khách hàng — Mộc Books</title>
+    <link rel="stylesheet" href="bookshop.css" />
+    <script src="bookshop.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">MỪNG BẠN GHÉ THĂM · MIỄN PHÍ VẬN CHUYỂN ĐƠN TỪ 300.000₫</div>
+    <header class="site-header">
+      <div class="header-main page-width">
+        <a class="brand" href="index.html" aria-label="Mộc Books, trang chủ"><span class="brand-mark" aria-hidden="true">M</span><span>MỘC<span class="brand-light">BOOKS</span></span></a>
+        <form class="search-form" role="search" action="index.html"><label class="visually-hidden" for="book-search">Tìm kiếm sách</label><input id="book-search" type="search" placeholder="Tìm sách, tác giả, chủ đề..." /><button type="submit" aria-label="Tìm kiếm">⌕</button></form>
+        <div class="header-actions"><a class="account-link" href="index.html#account-access"><span class="action-icon" aria-hidden="true">♙</span><span>Đăng nhập / Đăng ký</span></a><a class="cart-link" href="index.html#sach-noi-bat"><span class="action-icon" aria-hidden="true">♧</span><span>Giỏ hàng</span><b>0</b></a></div>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Mở danh mục"><span></span><span></span></button>
+      </div>
+      <nav class="primary-nav" id="primary-nav" aria-label="Danh mục chính"><div class="page-width nav-inner"><a href="index.html">Trang chủ</a><a href="index.html#sach-noi-bat">Sách bán chạy</a><a href="index.html#danh-muc">Danh mục sách</a><a href="index.html#goc-doc">Góc đọc Mộc</a><a href="index.html#account-access">Đăng nhập / Đăng ký</a></div></nav>
+    </header>
+    <main class="account-page page-width">
+      <div class="breadcrumbs"><a href="index.html">Trang chủ</a><span aria-hidden="true">/</span><span>Tài khoản của tôi</span></div>
+      <div class="section-heading account-heading"><div><p class="eyebrow">GÓC RIÊNG CỦA BẠN</p><h1>Tài khoản <em>khách hàng</em></h1></div><p>Xin chào, An! Quản lý thông tin và theo dõi những đơn sách của bạn tại đây.</p></div>
+      <div class="account-layout">
+        <aside class="account-sidebar">
+          <div class="profile-card"><div class="profile-avatar" aria-hidden="true">A</div><div><b>Nguyễn Minh An</b><small>Thành viên Mộc Books</small></div></div>
+          <nav class="account-menu" aria-label="Điều hướng tài khoản">
+            <a class="account-menu-active" href="#overview"><span aria-hidden="true">▦</span>Tổng quan</a>
+            <a href="#orders"><span aria-hidden="true">▤</span>Đơn hàng của tôi<i>2</i></a>
+            <a href="#profile-details"><span aria-hidden="true">♙</span>Thông tin cá nhân</a>
+            <a href="#address"><span aria-hidden="true">⌖</span>Sổ địa chỉ</a>
+            <a href="index.html"><span aria-hidden="true">↩</span>Tiếp tục khám phá sách</a>
+          </nav>
+          <div class="member-note"><span aria-hidden="true">✳</span><p><b>Cảm ơn bạn đã chọn Mộc.</b><br />Mỗi cuốn sách bạn đọc đều làm khu vườn này thêm xanh.</p></div>
+        </aside>
+        <div class="account-content" id="overview">
+          <div class="welcome-card"><div><p class="eyebrow">THẬT VUI KHI BẠN Ở ĐÂY</p><h2>Chào An, hôm nay bạn<br />muốn đọc gì?</h2><a class="text-link" href="index.html#sach-noi-bat">Tìm cuốn sách tiếp theo <span aria-hidden="true">→</span></a></div><div class="welcome-mark" aria-hidden="true">M<span>✳</span></div></div>
+          <div class="account-stats"><div class="stat-card"><span class="stat-icon stat-orders" aria-hidden="true">▤</span><span><small>Tổng số đơn hàng</small><b>08 <i>đơn</i></b></span></div><div class="stat-card"><span class="stat-icon stat-points" aria-hidden="true">✳</span><span><small>Điểm Mộc tích lũy</small><b>1.240 <i>điểm</i></b></span></div><div class="stat-card"><span class="stat-icon stat-books" aria-hidden="true">▧</span><span><small>Sách đã đồng hành</small><b>12 <i>cuốn</i></b></span></div></div>
+          <section class="account-panel" id="orders">
+            <div class="panel-heading"><div><p class="eyebrow">NHỮNG CUỐN SÁCH ĐANG TÌM ĐƯỜNG VỀ</p><h2>Đơn hàng gần đây</h2></div><a class="text-link" href="#orders">Xem tất cả <span aria-hidden="true">→</span></a></div>
+            <div class="orders-table-wrap"><table class="orders-table"><thead><tr><th>MÃ ĐƠN HÀNG</th><th>NGÀY ĐẶT</th><th>TỔNG TIỀN</th><th>TRẠNG THÁI</th><th></th></tr></thead><tbody><tr><td><b>#MC240819</b></td><td>19/08/2026</td><td>248.000₫</td><td><span class="order-status status-shipping">Đang giao</span></td><td><a href="#orders" aria-label="Xem đơn hàng MC240819">→</a></td></tr><tr><td><b>#MC240731</b></td><td>31/07/2026</td><td>156.000₫</td><td><span class="order-status status-done">Đã giao</span></td><td><a href="#orders" aria-label="Xem đơn hàng MC240731">→</a></td></tr></tbody></table></div>
+          </section>
+          <div class="details-grid">
+            <section class="account-panel details-panel" id="profile-details"><div class="panel-heading"><div><p class="eyebrow">THÔNG TIN CỦA BẠN</p><h2>Thông tin cá nhân</h2></div><a class="edit-link" href="#profile-details">Chỉnh sửa</a></div><dl class="detail-list"><div><dt>Họ và tên</dt><dd>Nguyễn Minh An</dd></div><div><dt>Email</dt><dd>an.nguyen@email.com</dd></div><div><dt>Số điện thoại</dt><dd>09•• ••• 428</dd></div></dl></section>
+            <section class="account-panel details-panel" id="address"><div class="panel-heading"><div><p class="eyebrow">NƠI NHỮNG CUỐN SÁCH TÌM ĐẾN</p><h2>Địa chỉ nhận hàng</h2></div><a class="edit-link" href="#address">Chỉnh sửa</a></div><div class="address-card"><span class="address-tag">MẶC ĐỊNH</span><b>Nguyễn Minh An · 09•• ••• 428</b><p>18 Nguyễn Huệ, Phường Bến Nghé,<br />Quận 1, TP. Hồ Chí Minh</p></div></section>
+          </div>
+          <p class="demo-disclaimer">Thông tin hiển thị là nội dung minh họa cho giao diện.</p>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer"><div class="page-width footer-main"><div class="footer-brand"><a class="brand brand-footer" href="index.html"><span class="brand-mark" aria-hidden="true">M</span><span>MỘC<span class="brand-light">BOOKS</span></span></a><p>Một góc nhỏ để tìm sách hay<br />và những phút giây thuộc về mình.</p></div><div class="footer-column"><b>Về Mộc</b><a href="index.html#goc-doc">Câu chuyện của chúng tôi</a><a href="index.html#sach-noi-bat">Sách nổi bật</a><a href="account.html">Tài khoản khách hàng</a></div><div class="footer-column"><b>Hỗ trợ</b><a href="index.html#footer">Hướng dẫn mua hàng</a><a href="index.html#footer">Chính sách giao hàng</a><a href="index.html#footer">Liên hệ</a></div><div class="footer-column footer-admin"><b>Dành cho quản trị</b><a href="admin.html">Đăng nhập quản trị viên ↗</a></div></div><div class="page-width footer-bottom" id="footer"><span>© 2026 Mộc Books · Một trang sách, một khoảng trời.</span><span>Được làm nên từ tình yêu dành cho sách.</span></div></footer>
+  </body>
+</html>
