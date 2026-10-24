@@ -1017,4 +1017,247 @@ h1, h2, h3 {
     }
 }
 
+.title_{
+    width: 80%;
+    margin: auto;
+}
+.title_ h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    
+}
+.title_ p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+.search_{
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#search-input {
+    width: 300px;
+    height: 30px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+#search-input:focus {
+    border-color: #315b50;
+}
+.search_ button:hover {
+    background-color: blue;
+}
+.search_ button {
+    height: 30px;
+    background-color: #315b50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.book-grid_ {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 40px;
+    
+}
+.book-card_ {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
 
+.book-card_ img {
+    display: block;
+    width: 285px;
+    height: 375px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 14px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+}
+.book-card_ h3 {
+    font-size: 17px;
+    font-weight: normal;
+    color: #244b43;
+    margin: 8px 0 5px;
+    min-height: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.book-card_ p {
+    font-size: 13px;
+    color: #77766f;
+    line-height: 1.5;
+    margin: 3px 0;
+}
+.book-card_ p:nth-of-type(2) {
+    font-size: 16px;
+    font-weight: bold;
+    color: #315b50;
+    margin-top: 14px;
+    margin-bottom: 12px;
+}
+.book-card_ button {
+    width: 100%;
+    padding: 9px 10px;
+    margin-top: auto;
+    border: 1px solid #e0e5d9;
+    background-color: transparent;
+    color: #315b50;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.pagination_{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addtocart_{
+    display: flex;
+    gap: 40px;
+}
+
+.addtocart_ {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    margin-top: auto;
+}
+
+.addtocart_ button {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+
+
+/* Lớp phủ toàn màn hình */
+.modal_ {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Khung nội dung Modal */
+.modal-content_ {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    max-width: 700px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    margin: auto;
+}
+
+/* Nút đóng */
+.close-modal_ {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #555;
+}
+
+.close-modal_:hover {
+    color: #e74c3c;
+}
+
+/* Nội dung chi tiết sách */
+.modal-body_ {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+
+.modal-body_ img {
+    width: 220px;
+    max-width: 40%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.modal-info_ {
+    flex: 1;
+}
+
+.modal-info_ h2 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin: 0 0 15px;
+}
+
+.modal-info_ p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    margin: 8px 0;
+}
+
+.modal-price_ {
+    font-size: 22px !important;
+    font-weight: bold;
+    color: #e74c3c !important;
+}
+
+/* Giao diện điện thoại */
+@media (max-width: 600px) {
+    .modal-content_ {
+        padding: 25px 18px;
+    }
+
+    .modal-body_ {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-body_ img {
+        max-width: 100%;
+        width: 180px;
+    }
+
+    .modal-info_ {
+        width: 100%;
+    }
+
+    .modal-info_ h2 {
+        font-size: 20px;
+    }
+}
