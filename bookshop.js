@@ -309,18 +309,110 @@ cartDrawer.addEventListener("click", (event) => {
 });
 
 // 15. Hiển thị xác nhận thanh toán minh họa và làm trống giỏ hàng
+
+const checkoutSection = document.querySelector("#checkout-step-section");
+const step1Form = document.querySelector("#step1-address-form");
+const step1Content = document.querySelector("#checkout-step-1");
+const step2Content = document.querySelector("#checkout-step-2");
+
+const stepIndicator1 = document.querySelector("#step-indicator-1");
+const stepIndicator2 = document.querySelector("#step-indicator-2");
+
+const checkoutTotalAmount = document.querySelector("#checkout-total-amount");
+const backToShopButton = document.querySelector("#back-to-shop-btn");
+const backToStep1Button = document.querySelector("#btn-back-to-step1");
+const confirmOrderButton = document.querySelector("#btn-confirm-final-order");
+
 checkoutButton.addEventListener("click", () => {
     if (cart.size === 0) {
         return;
     }
 
+    const cartTotal = document.querySelector("[data-cart-total]");
+    if (cartTotal) {
+        checkoutTotalAmount.textContent = cartTotal.textContent;
+    }
+
+    cartDrawer.close();
+
+    checkoutSection.hidden = false;
+
+    checkoutSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+    step1Content.hidden = false;
+    step2Content.hidden = true;
+
+    stepIndicator1.classList.add("is-active");
+    stepIndicator2.classList.remove("is-active");
+});
+
+step1Form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    step1Content.hidden = true;
+    step2Content.hidden = false;
+
+    stepIndicator1.classList.remove("is-active");
+    stepIndicator2.classList.add("is-active");
+
+    checkoutSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+});
+
+backToStep1Button.addEventListener("click", () => {
+    step2Content.hidden = true;
+    step1Content.hidden = false;
+
+    stepIndicator2.classList.remove("is-active");
+    stepIndicator1.classList.add("is-active");
+
+    checkoutSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+});
+
+backToShopButton.addEventListener("click", () => {
+    checkoutSection.hidden = true;
+
+    document.querySelector("#sach-noi-bat").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+});
+
+confirmOrderButton.addEventListener("click", () => {
+    if (cart.size === 0) {
+        return;
+    }
+
+    const selectedPayment = document.querySelector(
+        'input[name="payment-method"]:checked'
+    );
+
+    if (!selectedPayment) {
+        alert("Vui lòng chọn phương thức thanh toán.");
+        return;
+    }
+
     cart.clear();
     renderCart();
-    cartDrawer.close();
+
+    checkoutSection.hidden = true;
+
     checkoutSuccessDialog.showModal();
 });
 
-document.querySelectorAll("[data-close-checkout-success]").forEach((button) => {
+const closeCheckoutSuccessButtons = document.querySelectorAll(
+    "[data-close-checkout-success]"
+);
+
+closeCheckoutSuccessButtons.forEach((button) => {
     button.addEventListener("click", () => {
         checkoutSuccessDialog.close();
     });
