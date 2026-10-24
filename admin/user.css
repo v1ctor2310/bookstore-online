@@ -1,0 +1,136 @@
+
+.btn-delete {
+    color: #ef4444;
+    margin-left: 5px;
+}
+
+.btn-delete:hover {
+    background: #fef2f2;
+    border-color: #ef4444;
+}
+
+.btn-resetpass{
+    color:#FFD700;
+}
+
+.btn-resetpass:hover{
+    background:#FFFFF0;
+    border-color:#FFD700;
+}
+
+.btn-lock {
+    color: #00A300;
+    margin-left: 5px;
+}
+
+.btn-lock:hover {
+    background: #E6FFE6;
+    border-color: #00A300;
+}
+
+.btn-unlock {
+    color: #ef4444;
+    margin-left: 5px;
+}
+
+.btn-unlock:hover {
+    background: #fef2f2;
+    border-color: #ef4444;
+}
+/* modal box*/
+.modal-overlay{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100vw;
+    height:100vh;
+    background: rgba(0, 0, 0, 0.3);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+}
+.modal-overlay:hover{
+    background:rgba(0,0,0,0.6);
+    transition: 0.3s;
+}
+.modal-box {
+    background: #ffffff; /* Màu nền trắng sáng */
+    padding: 24px;
+    border-radius: 10px;
+    width: 380px; /* Cố định chiều rộng để hộp không bị co rúm */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25); /* Đổ bóng tạo chiều sâu */
+}
+
+
+.modal-main h2 {
+    color: #1f4135; 
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eef0ea;
+    padding-bottom: 8px;
+}
+
+.modal-main p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+
+#modal-newpass {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-weight: bold;
+}
+
+#input-newpassword {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    font-weight: normal;
+}
+
+#input-newpassword:focus {
+    border-color: #1f4135;
+}
+
+.button-modal {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 10px; 
+    margin-top: 15px;
+}
+
+.btn-cancelnewpass {
+    padding: 8px 16px;
+    background: #e5e7eb;
+    color: #374151;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-cancelnewpass:hover {
+    background: #d1d5db;
+}
+
+.btn-savenewpass {
+    padding: 8px 16px;
+    background: #1f4135; 
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-savenewpass:hover {
+    background: #285445;
+}
