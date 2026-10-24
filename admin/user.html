@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Người Dùng</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <i class="fa-solid fa-book-open"></i>
+                <span>BookStore Admin</span>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+                <li><a href="products.html"><i class="fa-solid fa-book"></i> Quản lý Sách (Mục 11)</a></li>
+                <li><a href="import.html"><i class="fa-solid fa-boxes-stacked"></i> Nhập hàng & Giá (Mục 12)</a></li>
+                <li class="active"><a href="#"><i class="fa-solid fa-users"></i> Người dùng</a></li>
+                <li><a href="#"><i class="fa-solid fa-receipt"></i> Đơn hàng</a></li>
+            </ul>
+        </aside>
+
+        <div class="main-content">
+            <header class="topbar">
+                <div class="admin-user">
+                    <span>Xin chào, <strong>...</strong></span>
+                    <a href="../index.html" class="btn-logout"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a>
+                </div>
+            </header>
+
+            <main class="content-body">
+                <div class="page-header-flex">
+                    <h1>Quản lý Người dùng</h1>
+                    <button class="btn-add"><i class="fa-solid fa-plus"></i> Thêm tài khoản</button>
+                </div>
+
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Họ và Tên</th>
+                                <th>Email</th>
+                                <th>Quyền hạn</th>
+                                <th>Trạng thái</th>
+                                <th>Ngày tạo</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody id="user-tablebody">
+                        </tbody>    
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+    <!-- password box khi change passsword -->
+    
+        <div id="password-modal" class="modal-overlay" style="display:none;">
+            <div class="modal-box">
+                <div class="modal-main">
+                    <h2>Đổi mật khẩu</h2>
+                    <p id="modal-username">Username: </p>
+                        <!-- input de luu tam ID trong modal box -->
+                    <input type="hidden" id="modal-userid">
+                    <p id="modal-newpass">Nhập mật khẩu mới: <input id="input-newpassword"></p>
+                </div>
+                <div class="button-modal">
+                    <button class="btn-cancelnewpass" onclick="closeChangePassModal()">Hủy</button>
+                    <button class="btn-savenewpass" onclick="saveNewPass()">Lưu</button>
+                </div>
+            </div>
+        </div>
+    <script src="user.js"></script>
+</body>
+</html>
